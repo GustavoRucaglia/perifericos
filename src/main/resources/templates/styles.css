@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f7e6a2;
+    color: #000;
+    padding: 10px 0;
+    margin-bottom: 80px; /* Aumente a margem inferior para separar do conteúdo abaixo */
+}
+
+nav ul {
+    list-style: none;
+    padding: ;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Aplique margin-right: auto; ao primeiro item da lista para alinhar à esquerda */
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul li {
+    margin-right: 60px; /* Aumente o espaçamento aqui */
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a img {
+    margin-right: 10px;
+    width: 65px;
+}
+
+/* Seu CSS anterior aqui */
+
+.login-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.login-section h1 {
+    font-size: 32px;
+}
+
+.login-section h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.login-box {
+    background-color: #f7e6a2;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-actions {
+    margin-top: 20px; /* Espaço de uma linha entre os links */
+    text-align: left;
+}
+
+.form-actions a {
+    text-decoration: none;
+    color: #4682B4;
+    text-decoration: underline;
+    font-weight: bold;
+    display: block; /* Para que cada link seja exibido em uma linha separada */
+    margin-bottom: 3px; /* Espaço entre os links */
+}
+
+/* Estilo para o botão "Entrar" */
+button {
+    background-color: #8DC63F; /* Cor verde */
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+/* Estilize os botões de contato */
+.contact-buttons,
+.contact-buttons1 {
+    background-color: #F7E6A2; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    margin: 20px; /* Espaçamento externo */
+    border-radius: 20px; /* Borda arredondada */
+    width: 600px;
+    height: 80px;
+}
+
+/* Estilize a lista */
+.contact-buttons ul,
+.contact-buttons1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilize os itens da lista */
+.contact-buttons li,
+.contact-buttons1 li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Espaço entre os itens */
+    font-weight: bold;
+}
+
+/* Estilize as imagens */
+.contact-buttons img,
+.contact-buttons1 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Estilize o texto */
+.contact-buttons p,
+.contact-buttons1 p {
+    margin: 0;
+}
+
+/* Estilize a área do carrinho */
+.container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px; /* Ajuste o valor conforme necessário */
+}
+
+.container h1 {
+    font-size: 32px;
+    
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    background-color: #F7E6A2;
+}
+
+.product img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #8DC63F; /* Cor verde para o preço */
+}
+
+.remove-button {
+    background-color: #f44336; /* Cor vermelha */
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* CSS dos produtos */
+
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 30px; /* Adicione uma margem à esquerda e à direita */
+    padding-bottom: 20px; /* Espaço na parte inferior dos produtos */
+
+}
+
+.product-item {
+    width: 400px;
+    height: 280px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background-color: #F7E6A2;
+    padding: 10px;
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    flex-direction: column; /* Alinhe nome e preço verticalmente */
+    align-items: center; /* Alinhe ao centro horizontalmente */
+    border: 1px solid #ccc; /* Adicione uma borda ao redor dos produtos */
+}
+
+.product-item img {
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.product-price {
+    font-size: 14px;
+}
+
+/* CSS para a página de exemplo do produto */
+
+.product-details {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #F7E6A2;
+}
+
+.product-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    flex: 2;
+    padding: 10px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #8DC63F;
+}
+
+.product-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-buttons button {
+    background-color: #8DC63F;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 20px;
+    height: 40px;
+}
+
+.product-specs {
+    flex: 1;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+
+.product-specs h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-specs .specs-content {
+    max-height: 300px;
+    overflow-y: auto;
+}

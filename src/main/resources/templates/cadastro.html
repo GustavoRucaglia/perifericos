@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html"><img src="/home.png" alt="Home"></a></li>
+                <li><a href="login.html"><img src="/login.png" alt="Login"> LOGIN/CADASTRAR</a></li>
+                <li><a href="atendimento.html"><img src="/atendimento.png" alt="Atendimento"> ATENDIMENTO</a></li>
+                <li><a href="carrinho.html"><img src="/carrinho.png" alt="Carrinho"> CARRINHO</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <section class="login-section">
+        <h1>NÃO TEM UMA CONTA?</h1>
+        <h2>FAÇA SEU CADASTRO</h2>
+        <div class="login-box">
+            <form th:action="@{/perifericos/add-cliente}" th:object="${cliente}" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex. Gabriel Felizardo" required
+                    th:field="*{nome}">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="number" id="cpf" name="cpf" placeholder="Ex. 000.000.000-00" maxlength="11" required
+                    th:field="*{cpf}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex. exemplo@gmail.com" required
+                    th:field="*{email}">
+                </div>      
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Ex. Exemplo123" 
+                    th:fiedl="*{senha}">
+                </div>
+                <div class="form-group">
+                    <label for="endereço">Endereço:</label>
+                    <input type="text" id="text" name="text" placeholder="Ex. Av Tamarindo, 22" required
+                    th:field="*{endereco}">
+                </div>
+                <div class="form-actions">
+                    <a href="login.html" >Já tem uma conta? Faça seu login</a> 
+                </div>
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
