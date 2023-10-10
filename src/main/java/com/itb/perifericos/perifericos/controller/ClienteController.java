@@ -17,13 +17,24 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
-	@GetMapping("/novo-cliente")
+	@GetMapping("/cadastro")
 	  public String novoCliente(Cliente cliente,Model model) {
 		
 		model.addAttribute("cliente",cliente);
 		return "cadastro";
 	}
 	
+	@GetMapping("/atendimento")
+	  public String atendimento() {
+		
+		return "atendimento";
+	}
+	
+	
+	@GetMapping("/home")
+	String home() {
+		return "index.html";
+	}
 	
 	//Cadastrar o cliente
 	
@@ -47,17 +58,7 @@ public class ClienteController {
 		return "perifericos/home";
 	}
 	
-	@GetMapping("/novo-cliente")
-	  public String novoCliente() {
-		
-		return "cadastro";
-	}
 	
-	@GetMapping("/novo-cliente")
-	  public String novoCliente() {
-		
-		return "cadastro";
-	}
 		
 	}
 	
