@@ -17,6 +17,25 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
+	// paginas html
+	@GetMapping("/carrinho")
+	  public String atendimento() {
+		
+		return "carrinho";
+	}
+	
+	@GetMapping("/login")
+	  public String atendimento() {
+		
+		return "login";
+	}
+	
+	@GetMapping("/mouseprod")
+	  public String atendimento() {
+		
+		return "mouse-prod";
+	}
+	
 	@GetMapping("/cadastro")
 	  public String novoCliente(Cliente cliente,Model model) {
 		
