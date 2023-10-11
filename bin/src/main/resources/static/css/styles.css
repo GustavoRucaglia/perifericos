@@ -13,6 +13,7 @@ header {
 
 nav ul {
     list-style: none;
+    padding: ;
     display: flex;
     justify-content: flex-start;
 }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="/css/crud.css">
+    <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="crud-header">
+    </header>
+
+    <main class="container-crud">
+        <header class="nav-crud">
+           <ul>
+           		<li>Administrador</li>
+           </ul>
+        </header>
+        <section class="crud">
+            <h1>Controle de usuários</h1>
+            <br>
+            <table class="table table-striped table-responsive-md t1">
+              <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Status</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Deletar</th>
+                    <th>Ativar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="usuario : ${listaclientes}">
+                    <td th:text="${usuario.id}"></td>
+                    <td th:text="${usuario.codStatusCliente}"></td>
+                    <td th:text="${usuario.nome}"></td>
+                    <td th:text="${usuario.email}"></td>
+                    <td th:text="${usuario.cpf}"></td>
+                    <td th:text="${usuario.endereco}"></td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-desativar" th:onclick="'desativarUsuario(' + ${usuario.id} + ')'">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                     <td>
+                      <button type="button" class="btn  btn-success" th:onclick="'ativarUsuario(' + ${usuario.id} + ')'">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+    </main>
+    <script>
+        function desativarUsuario(id) {
+                fetch('/perifericos/desativar-usuario/' + id, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Log para verificar a resposta do servidor
+                    console.log('Usuário desativado com sucesso', data);
+                    
+                })
+                .catch(error => {
+                    // Log para verificar erros
+                    console.error('Erro ao desativar usuário', error);
+                });
+                location.assign(location.href);
+            }
+        
+        
+         function ativarUsuario(id) {    
+        
+                fetch('/perifericos/ativar-usuario/' + id, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Log para verificar a resposta do servidor
+                    console.log('Usuário desativado com sucesso', data);
+                    
+                    // Recarregar a página ou atualizar a tabela, dependendo do seu fluxo
+                    location.reload();
+                })
+                .catch(error => {
+                    // Log para verificar erros
+                    console.error('Erro ao desativar usuário', error);
+                });
+                location.assign(location.href);
+            }
+        
+       
+    		</script>
+</body>
+</html>

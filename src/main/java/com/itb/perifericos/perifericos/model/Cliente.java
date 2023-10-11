@@ -19,9 +19,28 @@ public class Cliente {
 	private String cpf;
 	private String senha;
 	private String endereco;
-	private boolean codStatusCliente;
-
+	private Boolean codStatusCliente = true;
 	
+	public Cliente() {
+		
+	}
+	
+	
+	
+	public Cliente(Long id, String nome, String email, String cpf, String senha, String endereco,
+			Boolean codStatusCliente) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.cpf = cpf;
+		this.senha = senha;
+		this.endereco = endereco;
+		this.codStatusCliente = codStatusCliente;
+	}
+
+
+
 	public String getSenha() {
 		return senha;
 	}
