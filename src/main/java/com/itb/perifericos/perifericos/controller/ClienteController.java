@@ -19,19 +19,19 @@ public class ClienteController {
 	
 	// paginas html
 	@GetMapping("/carrinho")
-	  public String atendimento() {
+	  public String carrinho() {
 		
 		return "carrinho";
 	}
 	
 	@GetMapping("/login")
-	  public String atendimento() {
+	  public String login() {
 		
 		return "login";
 	}
 	
 	@GetMapping("/mouseprod")
-	  public String atendimento() {
+	  public String mousepad() {
 		
 		return "mouse-prod";
 	}
